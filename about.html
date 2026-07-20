@@ -10,56 +10,19 @@
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Specific editorial layouts for the biography experience */
-        .story-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: flex-start;
-            margin-bottom: 5rem;
-        }
-        .story-content h3 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: var(--color-accent);
-        }
-        .story-content p {
-            color: var(--color-text-muted);
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
-        }
-        .feature-callout {
-            background: var(--color-bg-white);
-            border-left: 3px solid var(--color-accent);
-            padding: 2.5rem;
-            margin-top: 4rem;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            border-radius: 2px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.01);
-        }
-        .pillar h4 {
-            font-family: var(--font-serif);
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-        .pillar p {
-            font-size: 0.9rem;
-            color: var(--color-text-muted);
-            line-height: 1.5;
-        }
-        @media (max-width: 768px) {
-            .story-section { grid-template-columns: 1fr; gap: 3rem; }
-            .feature-callout { grid-template-columns: 1fr; padding: 1.5rem; }
-        }
+        .story-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: flex-start; margin-bottom: 5rem; }
+        .story-content h3 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-accent); }
+        .story-content p { color: var(--color-text-muted); margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .feature-callout { background: var(--color-bg-white); border-left: 3px solid var(--color-accent); padding: 2.5rem; margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; border-radius: 2px; }
+        .pillar h4 { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.5rem; }
+        .pillar p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; }
+        @media (max-width: 768px) { .story-section { grid-template-columns: 1fr; gap: 3rem; } .feature-callout { grid-template-columns: 1fr; padding: 1.5rem; } }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION HEADER -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">ANU HENNA CREATIONS</a>
@@ -77,30 +40,22 @@
     </header>
 
     <main class="container">
-        <!-- HEADER TEXT -->
         <div class="section-header" style="text-align: left;">
             <h2>The Artist Behind The Flow</h2>
             <p>Blending timeless heritage patterns with striking modern line precision.</p>
         </div>
-
-        <!-- BIOGRAPHY GRID -->
         <div class="story-section">
             <div class="intro-image">
-                <!-- Replace with a high-end headshot or professional work photo later -->
                 <img src="https://unsplash.com" alt="Anu Nakrani Applying Henna Artistry" style="width: 100%; border-radius: 2px;">
             </div>
-            
             <div class="story-content">
                 <h3>Meet Anu Nakrani</h3>
                 <p>Welcome to Anu Henna Creations. Based proudly out of Morris Plains, New Jersey, my journey into the fine art of freehand mehndi stems from a deep appreciation for geometric symmetry, rhythmic balance, and cultural heritage storytelling.</p>
                 <p>What sets our studio apart is a steadfast refusal to rush the creative process. Every bridal drape and intricate pattern layout is strictly curated to mirror the individuality of the muse. From bold Rajasthani elements to delicate Arabic laces, we bring vision to life with precision.</p>
                 <p>We invite you to experience the therapeutic nature of natural, clean henna paste preparation and adornment on your most monumental day.</p>
-                
                 <a href="booking.html" class="btn btn-primary" style="margin-top: 1rem;">Inquire For Your Date</a>
             </div>
         </div>
-
-        <!-- THREE CORE PILLARS IN DESIGN VALUE -->
         <div class="feature-callout">
             <div class="pillar">
                 <h4>100% Organic Promise</h4>
@@ -117,13 +72,12 @@
         </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-bottom">
             <p>&copy; 2026 Anu Henna Creations. Hosted with GitHub Pages.</p>
         </div>
     </footer>
 
-    <script src="assets/js/main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
