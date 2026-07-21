@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore custom luxury bridal mehndi and intricate freehand henna designs by Anu Henna Creations.">
+    <title>The Signature Portfolio | Anu Henna Creations</title>
+    
+    <!-- Premium Typography Setup -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Flat link directly to your main style sheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .filter-controls { 
+            display: flex; 
+            justify-content: center; 
+            gap: 1.5rem; 
+            margin-bottom: 3.5rem; 
+            flex-wrap: wrap; 
+        }
+        .filter-btn { 
+            background: transparent; 
+            border: none; 
+            font-family: var(--font-sans); 
+            font-size: 0.85rem; 
+            text-transform: uppercase; 
+            letter-spacing: 0.15em; 
+            color: var(--color-text-muted); 
+            cursor: pointer; 
+            padding: 0.5rem 1rem; 
+            position: relative; 
+            transition: var(--transition); 
+        }
+        .filter-btn::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: 0; 
+            left: 50%; 
+            width: 0; 
+            height: 1px; 
+            background: var(--color-accent); 
+            transition: var(--transition); 
+            transform: translateX(-50%); 
+        }
+        .filter-btn:hover, .filter-btn.active { 
+            color: var(--color-primary); 
+        }
+        .filter-btn.active::after { 
+            width: 100%; 
+        }
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 2rem; 
+        }
+        .gallery-item { 
+            aspect-ratio: 4 / 5; 
+            overflow: hidden; 
+            position: relative; 
+            background-color: var(--color-primary); 
+            border-radius: 2px; 
+            transition: opacity 0.4s ease, transform 0.4s ease; 
+        }
+        .gallery-item.hidden { 
+            display: none; 
+        }
+        .gallery-item img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            transition: var(--transition); 
+        }
+        .gallery-item:hover img { 
+            transform: scale(1.05); 
+            opacity: 0.4; 
+        }
+        @media (max-width: 768px) { 
+            .gallery-grid { grid-template-columns: 1fr; gap: 1.5rem; } 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION HEADER -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">ANU HENNA CREATIONS</a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="booking.html">Bookings</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- HEADER TEXT -->
+        <div class="section-header">
+            <h2>The Signature Galleries</h2>
+            <p>A window into custom freehand line density, symmetry, and rich natural tones.</p>
+        </div>
+
+        <!-- FILTER CATEGORY SWITCHES -->
+        <div class="filter-controls">
+            <button class="filter-btn active" data-filter="all">All Artworks</button>
+            <button class="filter-btn" data-filter="bridal">Bridal Adornment</button>
+            <button class="filter-btn" data-filter="festive">Festive & Party</button>
+            <button class="filter-btn" data-filter="stain">Stain Progressions</button>
+        </div>
+
+        <!-- DYNAMIC FILTERABLE GRID -->
+        <div class="gallery-grid" id="portfolioGrid">
+            
+            <!-- BRIDAL ITEM -->
+            <div class="gallery-item" data-category="bridal">
+                <img src="https://unsplash.com" alt="Bespoke Heavy Bridal Mehndi">
+                <div class="item-overlay"><h3>Bridal Elegance</h3></div>
+            </div>
+
+            <!-- FESTIVE ITEM -->
+            <div class="gallery-item" data-category="festive">
+                <img src="https://unsplash.com" alt="Sangeet Party Hand Pattern Accent">
+                <div class="item-overlay"><h3>Contemporary Accent</h3></div>
+            </div>
+
+            <!-- STAIN ITEM -->
+            <div class="gallery-item" data-category="stain">
+                <img src="https://unsplash.com" alt="Deep Organic Mahogany Stain Results">
+                <div class="item-overlay"><h3>Rich Mahogany Stain</h3></div>
+            </div>
+
+            <!-- BRIDAL ITEM -->
+            <div class="gallery-item" data-category="bridal">
+                <img src="https://unsplash.com" alt="Intricate Hand Symmetry Placement">
+                <div class="item-overlay"><h3>Traditional Royal Details</h3></div>
+            </div>
+
+            <!-- FESTIVE ITEM -->
+            <div class="gallery-item" data-category="festive">
+                <img src="https://unsplash.com" alt="Intricate Finger Elements">
+                <div class="item-overlay"><h3>Festive Minimalism</h3></div>
+            </div>
+
+            <!-- STAIN ITEM -->
+            <div class="gallery-item" data-category="stain">
+                <img src="https://unsplash.com" alt="Fresh Paste Versus Mature Stain">
+                <div class="item-overlay"><h3>Natural Development</h3></div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Anu Henna Creations. </p>
+        </div>
+    </footer>
+
+    <!-- Direct connection to your script files in the flat list -->
+    <script src="main.js"></script>
+    <script src="portfolio.js"></script>
+</body>
+</html>
