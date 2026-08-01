@@ -6,16 +6,13 @@
     <meta name="description" content="Shop professional organic henna supplies and book custom premium design options by Anu Henna Creations.">
     <title>The Supply Shop | Anu Henna Creations</title>
     
-    <!-- Premium Typography Setup -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- Flat link directly to your main style sheet -->
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Unique item styles for ecommerce catalog presentation */
         .shop-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -79,6 +76,10 @@
             border-color: var(--color-accent);
             color: var(--color-bg-white);
         }
+        .instagram-feed-section { margin: 4rem 0; }
+        .instagram-feed-section h3 { text-align: center; margin-bottom: 2rem; font-size: 1.8rem; }
+        .instagram-feed-container { display: flex; justify-content: center; margin: 2rem 0; }
+        .instagram-feed-container iframe { border-radius: 2px; }
         @media (max-width: 900px) {
             .shop-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
         }
@@ -89,7 +90,6 @@
 </head>
 <body>
 
-    <!-- NAVIGATION HEADER -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">ANU HENNA CREATIONS</a>
@@ -107,20 +107,17 @@
     </header>
 
     <main class="container">
-        <!-- HEADER TEXT -->
         <div class="section-header">
             <h2>Our Menu & Products</h2>
             <p>Select from our premium organic supply stock or book group services below.</p>
         </div>
 
-        <!-- PRODUCT GRID -->
         <div class="shop-grid">
             
-            <!-- ITEM 1: SIGNATURE HENNA -->
             <div class="product-card">
                 <div>
                     <div class="product-image">
-                        <img src="https://unsplash.com" alt="Signature Fresh Henna Cone Pack">
+                        <img src="https://via.placeholder.com/400x400?text=Henna+Cones" alt="Signature Fresh Henna Cone Pack">
                     </div>
                     <div class="product-meta">
                         <h3 class="product-title">Signature Organic Henna Cones</h3>
@@ -131,11 +128,10 @@
                 <button class="btn buy-btn" onclick="openShopCheckout('Signature Organic Henna Cones', '15.00')">Order Now</button>
             </div>
 
-            <!-- ITEM 2: CUSTOM DESIGN BOOKING -->
             <div class="product-card">
                 <div>
                     <div class="product-image">
-                        <img src="https://unsplash.com" alt="Bespoke Henna Artwork">
+                        <img src="https://via.placeholder.com/400x400?text=Custom+Design" alt="Bespoke Henna Artwork">
                     </div>
                     <div class="product-meta">
                         <h3 class="product-title">Custom Henna Design</h3>
@@ -146,11 +142,10 @@
                 <button class="btn buy-btn" onclick="openShopCheckout('Custom Henna Design Session', '30.00 per person')">Book Service</button>
             </div>
 
-            <!-- ITEM 3: LUXURY AFTERCARE BALM -->
             <div class="product-card">
                 <div>
                     <div class="product-image">
-                        <img src="https://unsplash.com" alt="Bridal Aftercare Balm">
+                        <img src="https://via.placeholder.com/400x400?text=Aftercare+Balm" alt="Bridal Aftercare Balm">
                     </div>
                     <div class="product-meta">
                         <h3 class="product-title">Luxury Aftercare Balm</h3>
@@ -162,17 +157,27 @@
             </div>
 
         </div>
+        
+        <!-- Instagram Feed Embed -->
+        <div class="instagram-feed-section">
+            <h3>Inspiration & Design Ideas</h3>
+            <div class="instagram-feed-container">
+                <iframe src="https://www.instagram.com/anu_henna_creations_/embed" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true"></iframe>
+            </div>
+        </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-bottom">
             <p>&copy; 2026 Anu Henna Creations. Hosted with GitHub Pages.</p>
         </div>
     </footer>
 
-    <!-- Flat JavaScript Links for Interactions -->
     <script src="main.js"></script>
-    <script src="shop.js"></script>
 </body>
 </html>

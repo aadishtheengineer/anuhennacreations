@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meet the artist behind Anu Henna Creations. Specializing in high-end freehand bridal mehndi in New Jersey.">
+    <meta name="description" content="Meet Anu Nakrani, the artist behind Anu Henna Creations. Specializing in high-end freehand bridal mehndi in New Jersey.">
     <title>Our Story & Philosophy | Anu Henna Creations</title>
     
     <link rel="preconnect" href="https://googleapis.com">
@@ -15,15 +15,18 @@
         .story-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: flex-start; margin-bottom: 5rem; }
         .story-content h3 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-accent); }
         .story-content p { color: var(--color-text-muted); margin-bottom: 1.5rem; font-size: 1.05rem; }
-        .feature-callout { background: var(--color-bg-white); border-left: 3px solid var(--color-accent); padding: 2.5rem; margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; border-radius: 2px; }
+        .feature-callout { background: var(--color-bg-white); border-left: 3px solid var(--color-accent); padding: 2.5rem; margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
         .pillar h4 { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.5rem; }
         .pillar p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; }
+        .instagram-feed-section { margin: 4rem 0; }
+        .instagram-feed-section h3 { text-align: center; margin-bottom: 2rem; font-size: 1.8rem; }
+        .instagram-feed-container { display: flex; justify-content: center; margin: 2rem 0; }
+        .instagram-feed-container iframe { border-radius: 2px; }
         @media (max-width: 768px) { .story-section { grid-template-columns: 1fr; gap: 3rem; } .feature-callout { grid-template-columns: 1fr; padding: 1.5rem; } }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION HEADER -->
     <header class="site-header">
         <div class="header-container">
             <a href="index.html" class="logo">ANU HENNA CREATIONS</a>
@@ -41,34 +44,30 @@
     </header>
 
     <main class="container">
-        <!-- HEADER TEXT -->
         <div class="section-header" style="text-align: left;">
             <h2>The Artist Behind The Flow</h2>
             <p>Blending timeless heritage patterns with striking modern line precision.</p>
         </div>
 
-        <!-- BIOGRAPHY GRID -->
         <div class="story-section">
             <div class="intro-image">
-                <!-- 🌟 FIXED: Changed alt description to be neutral and point to your root image file -->
-                <img src="about-me.jpg" alt="Freehand Henna Artistry" style="width: 100%; border-radius: 2px;">
+                <img src="https://via.placeholder.com/400x400?text=Anu+Nakrani" alt="Freehand Henna Artistry" style="width: 100%; border-radius: 2px;">
             </div>
             
             <div class="story-content">
                 <h3>Our Passion & Vision</h3>
-                <p>Welcome to Anu Henna Creations. Based proudly out of Morris Plains, New Jersey, our journey into the fine art of freehand mehndi stems from a deep appreciation for geometric symmetry, rhythmic balance, and cultural heritage storytelling.</p>
-                <p>What sets our studio apart is a steadfast refusal to rush the creative process. Every bridal drape and intricate pattern layout is strictly curated to mirror the individuality of the muse. From bold Rajasthani elements to delicate Arabic laces, we bring vision to life with precision.</p>
+                <p>Hi, my name is Anu Nakrani. I've always had a passion for art since I was a little kid, and now I'm using it for my job. I don't do this for the money—I do it because I love it.</p>
+                <p>I'm channeling my art skills and my art passion into something meaningful, and I truly believe that picking the henna road was the correct choice for me. Every design I create is thoughtfully crafted to reflect your unique personality and the significance of your event.</p>
                 <p>We invite you to experience the therapeutic nature of natural, clean henna paste preparation and adornment on your most monumental day.</p>
                 
                 <a href="booking.html" class="btn btn-primary" style="margin-top: 1rem;">Inquire For Your Date</a>
             </div>
         </div>
 
-        <!-- THREE CORE PILLARS IN DESIGN VALUE -->
         <div class="feature-callout">
             <div class="pillar">
                 <h4>100% Organic Promise</h4>
-                <p>We strictly source triple-sifted organic Rajasthani powder mixed purely with premium quality essential oils. Absolutely zero chemical chemicals or dyes.</p>
+                <p>We strictly source triple-sifted organic Rajasthani powder mixed purely with premium quality essential oils. Absolutely zero chemical additives or dyes.</p>
             </div>
             <div class="pillar">
                 <h4>Freehand Intricacy</h4>
@@ -79,9 +78,21 @@
                 <p>Our dedicated, completely chemical-free mixing techniques ensure rich, deep mahogany stain development that naturally highlights your bridal look.</p>
             </div>
         </div>
+        
+        <!-- Instagram Feed Embed -->
+        <div class="instagram-feed-section">
+            <h3>My Recent Works</h3>
+            <div class="instagram-feed-container">
+                <iframe src="https://www.instagram.com/anu_henna_creations_/embed" 
+                        width="100%" 
+                        height="600" 
+                        frameborder="0" 
+                        scrolling="no" 
+                        allowtransparency="true"></iframe>
+            </div>
+        </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="footer-bottom">
             <p>&copy; 2026 Anu Henna Creations. Hosted with GitHub Pages.</p>
