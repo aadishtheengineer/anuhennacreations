@@ -13,10 +13,11 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        .instagram-feed-section { margin: 4rem 0; }
-        .instagram-feed-section h3 { text-align: center; margin-bottom: 2rem; font-size: 1.8rem; }
-        .instagram-feed-container { display: flex; justify-content: center; margin: 2rem 0; }
-        .instagram-feed-container iframe { border-radius: 2px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
+        .gallery-item { aspect-ratio: 4/5; overflow: hidden; position: relative; background: var(--color-primary); border-radius: 2px; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .gallery-item:hover img { transform: scale(1.05); opacity: 0.8; }
+        @media (max-width: 768px) { .gallery-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
     </style>
 </head>
 <body>
@@ -43,24 +44,22 @@
             <p>A window into custom freehand line density, symmetry, and rich natural tones.</p>
         </div>
 
-        <!-- Instagram Feed Embed - Full Portfolio -->
-        <div class="instagram-feed-section">
-            <h3>All Henna Designs</h3>
-            <p style="text-align: center; color: var(--color-text-muted); margin-bottom: 2rem;">Follow @anu_henna_creations_ for the latest designs and inspiration</p>
-            <div class="instagram-feed-container">
-                <iframe src="https://www.instagram.com/anu_henna_creations_/embed" 
-                        width="100%" 
-                        height="800" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        allowtransparency="true"></iframe>
-            </div>
+        <div class="gallery-grid" id="portfolioGrid">
+            <div class="gallery-item"><img src="images/bridal-1.jpg" alt="Bridal Elegance"></div>
+            <div class="gallery-item"><img src="images/bridal-2.jpg" alt="Traditional Bridal"></div>
+            <div class="gallery-item"><img src="images/custom-3.jpg" alt="Custom Design"></div>
+            <div class="gallery-item"><img src="images/custom-4.jpg" alt="Personalized Henna"></div>
+            <div class="gallery-item"><img src="images/custom-5.jpg" alt="Custom Personalized"></div>
+            <div class="gallery-item"><img src="images/bridal-6.jpg" alt="Bridal Design"></div>
+            <div class="gallery-item"><img src="images/bridal-7.jpg" alt="Peacock Design"></div>
+            <div class="gallery-item"><img src="images/bridal-8.jpg" alt="Bridal Personalized"></div>
+            <div class="gallery-item"><img src="images/festive-9.jpg" alt="Festive Elephant Design"></div>
         </div>
     </main>
 
     <footer class="site-footer">
         <div class="footer-bottom">
-            <p>&copy; 2026 Anu Henna Creations. </p>
+            <p>&copy; 2026 Anu Henna Creations.</p>
         </div>
     </footer>
 

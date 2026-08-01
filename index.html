@@ -12,10 +12,11 @@
     
     <link rel="stylesheet" href="style.css">
     <style>
-        .instagram-feed-section { margin: 4rem 0; }
-        .instagram-feed-section h3 { text-align: center; margin-bottom: 2rem; font-size: 1.8rem; }
-        .instagram-feed-container { display: flex; justify-content: center; margin: 2rem 0; }
-        .instagram-feed-container iframe { border-radius: 2px; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 3rem; }
+        .portfolio-item { position: relative; overflow: hidden; aspect-ratio: 4/5; border-radius: 2px; background: var(--color-primary); }
+        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: var(--transition); }
+        .portfolio-item:hover img { transform: scale(1.05); opacity: 0.8; }
+        @media (max-width: 768px) { .portfolio-grid { grid-template-columns: 1fr; gap: 1.5rem; } }
     </style>
 </head>
 <body>
@@ -54,12 +55,12 @@
             <div class="intro-grid">
                 <div class="intro-text">
                     <h2>The Philosophy of Anu Henna Creations</h2>
-                    <p>Hi, my name is Anu Nakrani. I've always had a passion for art since I was a little kid, and now I'm using it for my job. I don't do this for the money—I do it because I love it. I'm channeling my art skills and my art passion into something meaningful, and I truly believe that picking the henna road was the correct choice for me.</p>
+                    <p>Hi, my name is Anu Nakrani. I've always had a passion for art since I was a little kid, and now I'm using it for my job. I don't do this for the money—I do it because I love it. I'm channeling my art skills and my art passion into something meaningful.</p>
                     <p>Every design I create is thoughtfully crafted to reflect your unique personality and the significance of your event. I work exclusively with organic, natural henna paste that is safe, nourishing, and produces a rich, lasting stain.</p>
-                    <a href="about.html" class="text-link">Read our story &rarr;</a>
+                    <a href="about.html" class="text-link">Read our story →</a>
                 </div>
                 <div class="intro-image">
-                    <img src="https://via.placeholder.com/400x400?text=Anu+Henna+Artist" alt="Freehand Henna Application" loading="lazy">
+                    <img src="images/bridal-1.jpg" alt="Freehand Henna Application" loading="lazy">
                 </div>
             </div>
         </section>
@@ -69,20 +70,17 @@
                 <h2>The Signature Portfolio</h2>
                 <p>A curated glance at our bespoke modern, heavy bridal, and clean traditional works.</p>
             </div>
-            
-            <!-- Instagram Feed Embed -->
-            <div class="instagram-feed-section">
-                <h3>Follow Our Latest Designs</h3>
-                <div class="instagram-feed-container">
-                    <iframe src="https://www.instagram.com/anu_henna_creations_/embed" 
-                            width="100%" 
-                            height="600" 
-                            frameborder="0" 
-                            scrolling="no" 
-                            allowtransparency="true"></iframe>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="images/bridal-1.jpg" alt="Bridal Elegance - Intricate Hands">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/bridal-2.jpg" alt="Traditional Bridal - Full Arms">
+                </div>
+                <div class="portfolio-item">
+                    <img src="images/custom-3.jpg" alt="Custom Personalized Design">
                 </div>
             </div>
-            
             <div class="center-btn">
                 <a href="portfolio.html" class="btn btn-secondary">Explore Full Gallery</a>
             </div>

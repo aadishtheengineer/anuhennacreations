@@ -18,11 +18,12 @@
         .feature-callout { background: var(--color-bg-white); border-left: 3px solid var(--color-accent); padding: 2.5rem; margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
         .pillar h4 { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.5rem; }
         .pillar p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; }
-        .instagram-feed-section { margin: 4rem 0; }
-        .instagram-feed-section h3 { text-align: center; margin-bottom: 2rem; font-size: 1.8rem; }
-        .instagram-feed-container { display: flex; justify-content: center; margin: 2rem 0; }
-        .instagram-feed-container iframe { border-radius: 2px; }
-        @media (max-width: 768px) { .story-section { grid-template-columns: 1fr; gap: 3rem; } .feature-callout { grid-template-columns: 1fr; padding: 1.5rem; } }
+        .portfolio-sample { margin-top: 4rem; }
+        .portfolio-sample h3 { text-align: center; margin-bottom: 2rem; }
+        .sample-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .sample-item { aspect-ratio: 4/5; overflow: hidden; border-radius: 2px; }
+        .sample-item img { width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 768px) { .story-section { grid-template-columns: 1fr; gap: 3rem; } .feature-callout { grid-template-columns: 1fr; } .sample-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -51,7 +52,7 @@
 
         <div class="story-section">
             <div class="intro-image">
-                <img src="https://via.placeholder.com/400x400?text=Anu+Nakrani" alt="Freehand Henna Artistry" style="width: 100%; border-radius: 2px;">
+                <img src="images/bridal-6.jpg" alt="Freehand Henna Artistry" style="width: 100%; border-radius: 2px;">
             </div>
             
             <div class="story-content">
@@ -79,16 +80,12 @@
             </div>
         </div>
         
-        <!-- Instagram Feed Embed -->
-        <div class="instagram-feed-section">
-            <h3>My Recent Works</h3>
-            <div class="instagram-feed-container">
-                <iframe src="https://www.instagram.com/anu_henna_creations_/embed" 
-                        width="100%" 
-                        height="600" 
-                        frameborder="0" 
-                        scrolling="no" 
-                        allowtransparency="true"></iframe>
+        <div class="portfolio-sample">
+            <h3>Recent Works</h3>
+            <div class="sample-grid">
+                <div class="sample-item"><img src="images/bridal-7.jpg" alt="Bridal Design"></div>
+                <div class="sample-item"><img src="images/custom-4.jpg" alt="Custom Design"></div>
+                <div class="sample-item"><img src="images/bridal-8.jpg" alt="Bridal Design"></div>
             </div>
         </div>
     </main>
