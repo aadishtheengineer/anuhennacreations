@@ -3,99 +3,525 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Meet Anu Nakrani, the artist behind Anu Henna Creations. Specializing in high-end freehand bridal mehndi in New Jersey.">
+
+    <meta
+        name="description"
+        content="Meet Anu Nakrani, the artist behind Anu Henna Creations. Specializing in high-end freehand bridal mehndi in New Jersey."
+    >
+
     <title>Our Story & Philosophy | Anu Henna Creations</title>
-    
+
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    
+
+    <link
+        href="https://googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet"
+    >
+
     <link rel="stylesheet" href="style.css">
+
     <style>
-        .story-section { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: flex-start; margin-bottom: 5rem; }
-        .story-content h3 { font-size: 2rem; margin-bottom: 1.5rem; color: var(--color-accent); }
-        .story-content p { color: var(--color-text-muted); margin-bottom: 1.5rem; font-size: 1.05rem; }
-        .feature-callout { background: var(--color-bg-white); border-left: 3px solid var(--color-accent); padding: 2.5rem; margin-top: 4rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .pillar h4 { font-family: var(--font-serif); font-size: 1.25rem; margin-bottom: 0.5rem; }
-        .pillar p { font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.5; }
-        .portfolio-sample { margin-top: 4rem; }
-        .portfolio-sample h3 { text-align: center; margin-bottom: 2rem; }
-        .sample-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .sample-item { aspect-ratio: 4/5; overflow: hidden; border-radius: 2px; }
-        .sample-item img { width: 100%; height: 100%; object-fit: cover; }
-        @media (max-width: 768px) { .story-section { grid-template-columns: 1fr; gap: 3rem; } .feature-callout { grid-template-columns: 1fr; } .sample-grid { grid-template-columns: 1fr; } }
+        .story-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: flex-start;
+            margin-bottom: 5rem;
+        }
+
+        .story-content h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .story-content p {
+            color: var(--color-text-muted);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .feature-callout {
+            background: var(--color-bg-white);
+            border-left: 3px solid var(--color-accent);
+            padding: 2.5rem;
+            margin-top: 4rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .pillar h4 {
+            font-family: var(--font-serif);
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar p {
+            font-size: 0.9rem;
+            color: var(--color-text-muted);
+            line-height: 1.5;
+        }
+
+        /* Recent Works */
+        .portfolio-sample {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        .portfolio-sample h3 {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            font-size: 2rem;
+        }
+
+        .sample-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .sample-item {
+            aspect-ratio: 4 / 5;
+            overflow: hidden;
+            border-radius: 4px;
+            position: relative;
+            background: #f5f5f5;
+        }
+
+        .sample-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .sample-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .sample-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1.2rem;
+            color: white;
+            background: linear-gradient(
+                transparent,
+                rgba(0, 0, 0, 0.7)
+            );
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+        }
+
+        .gallery-button {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+
+            .story-section {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .feature-callout {
+                grid-template-columns: 1fr;
+            }
+
+            .sample-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            .sample-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
     </style>
 </head>
+
 <body>
 
+    <!-- HEADER -->
     <header class="site-header">
+
         <div class="header-container">
-            <a href="index.html" class="logo">ANU HENNA CREATIONS</a>
+
+            <a href="index.html" class="logo">
+                ANU HENNA CREATIONS
+            </a>
+
             <nav class="main-nav">
+
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="booking.html">Bookings</a></li>
-                    <li><a href="shop.html">Shop</a></li>
+
+                    <li>
+                        <a href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="about.html" class="active">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="portfolio.html">
+                            Portfolio
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="booking.html">
+                            Bookings
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="shop.html">
+                            Shop
+                        </a>
+                    </li>
+
                 </ul>
+
             </nav>
-            <button class="mobile-toggle" aria-label="Toggle Navigation">☰</button>
+
+            <button
+                class="mobile-toggle"
+                aria-label="Toggle Navigation"
+            >
+                ☰
+            </button>
+
         </div>
+
     </header>
 
+
+    <!-- MAIN CONTENT -->
     <main class="container">
-        <div class="section-header" style="text-align: left;">
-            <h2>The Artist Behind The Flow</h2>
-            <p>Blending timeless heritage patterns with striking modern line precision.</p>
+
+        <div
+            class="section-header"
+            style="text-align: left;"
+        >
+
+            <h2>
+                The Artist Behind The Flow
+            </h2>
+
+            <p>
+                Blending timeless heritage patterns with striking modern
+                line precision.
+            </p>
+
         </div>
 
+
+        <!-- STORY -->
         <div class="story-section">
+
             <div class="intro-image">
-                <img src="images/bridal-6.jpg" alt="Freehand Henna Artistry" style="width: 100%; border-radius: 2px;">
+
+                <img
+                    src="images/bridal-6.jpg"
+                    alt="Freehand Henna Artistry"
+                    style="width: 100%; border-radius: 2px;"
+                >
+
             </div>
-            
+
+
             <div class="story-content">
-                <h3>Our Passion & Vision</h3>
-                <p>Hi, my name is Anu Nakrani. I've always had a passion for art since I was a little kid, and now I'm using it for my job. I don't do this for the money—I do it because I love it.</p>
-                <p>I'm channeling my art skills and my art passion into something meaningful, and I truly believe that picking the henna road was the correct choice for me. Every design I create is thoughtfully crafted to reflect your unique personality and the significance of your event.</p>
-                <p>We invite you to experience the therapeutic nature of natural, clean henna paste preparation and adornment on your most monumental day.</p>
-                
-                <a href="booking.html" class="btn btn-primary" style="margin-top: 1rem;">Inquire For Your Date</a>
+
+                <h3>
+                    Our Passion & Vision
+                </h3>
+
+                <p>
+                    Hi, my name is Anu Nakrani. I've always had a passion
+                    for art since I was a little kid, and now I'm using it
+                    for my job. I don't do this for the money—I do it
+                    because I love it.
+                </p>
+
+                <p>
+                    I'm channeling my art skills and my art passion into
+                    something meaningful, and I truly believe that picking
+                    the henna road was the correct choice for me. Every
+                    design I create is thoughtfully crafted to reflect your
+                    unique personality and the significance of your event.
+                </p>
+
+                <p>
+                    We invite you to experience the therapeutic nature of
+                    natural, clean henna paste preparation and adornment on
+                    your most monumental day.
+                </p>
+
+                <a
+                    href="booking.html"
+                    class="btn btn-primary"
+                    style="margin-top: 1rem;"
+                >
+                    Inquire For Your Date
+                </a>
+
             </div>
+
         </div>
 
+
+        <!-- THREE PILLARS -->
         <div class="feature-callout">
+
             <div class="pillar">
-                <h4>100% Organic Promise</h4>
-                <p>We strictly source triple-sifted organic Rajasthani powder mixed purely with premium quality essential oils. Absolutely zero chemical additives or dyes.</p>
+
+                <h4>
+                    100% Organic Promise
+                </h4>
+
+                <p>
+                    We strictly source triple-sifted organic Rajasthani
+                    powder mixed purely with premium quality essential oils.
+                    Absolutely zero chemical additives or dyes.
+                </p>
+
             </div>
+
+
             <div class="pillar">
-                <h4>Freehand Intricacy</h4>
-                <p>Every single layout, border accent, and lace detail is drawn purely freehand without stencils, ensuring entirely bespoke results for every bride.</p>
+
+                <h4>
+                    Freehand Intricacy
+                </h4>
+
+                <p>
+                    Every single layout, border accent, and lace detail is
+                    drawn purely freehand without stencils, ensuring
+                    entirely bespoke results for every bride.
+                </p>
+
             </div>
+
+
             <div class="pillar">
-                <h4>Deep Dark Stains</h4>
-                <p>Our dedicated, completely chemical-free mixing techniques ensure rich, deep mahogany stain development that naturally highlights your bridal look.</p>
+
+                <h4>
+                    Deep Dark Stains
+                </h4>
+
+                <p>
+                    Our dedicated, completely chemical-free mixing techniques
+                    ensure rich, deep mahogany stain development that
+                    naturally highlights your bridal look.
+                </p>
+
             </div>
+
         </div>
-        
+
+
+        <!-- RECENT WORKS -->
         <div class="portfolio-sample">
-            <h3>Recent Works</h3>
+
+            <h3>
+                Recent Works
+            </h3>
+
+
             <div class="sample-grid">
-                <div class="sample-item"><img src="images/bridal-7.jpg" alt="Bridal Design"></div>
-                <div class="sample-item"><img src="images/custom-4.jpg" alt="Custom Design"></div>
-                <div class="sample-item"><img src="images/bridal-8.jpg" alt="Bridal Design"></div>
+
+                <!-- Bridal 1 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/bridal-1.jpg"
+                        alt="Bridal Henna Design"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Bridal Elegance
+                    </div>
+
+                </div>
+
+
+                <!-- Bridal 2 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/bridal-2.jpg"
+                        alt="Intricate Bridal Henna Design"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Bridal Details
+                    </div>
+
+                </div>
+
+
+                <!-- Bridal 6 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/bridal-6.jpg"
+                        alt="Luxury Bridal Mehndi"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Luxury Bridal
+                    </div>
+
+                </div>
+
+
+                <!-- Bridal 7 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/bridal-7.jpg"
+                        alt="Detailed Bridal Mehndi"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Intricate Artistry
+                    </div>
+
+                </div>
+
+
+                <!-- Bridal 8 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/bridal-8.jpg"
+                        alt="Traditional Bridal Henna"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Traditional Beauty
+                    </div>
+
+                </div>
+
+
+                <!-- Custom 3 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/custom-3.jpg"
+                        alt="Custom Henna Design"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Custom Creations
+                    </div>
+
+                </div>
+
+
+                <!-- Custom 4 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/custom-4.jpg"
+                        alt="Custom Mehndi Design"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Custom Mehndi
+                    </div>
+
+                </div>
+
+
+                <!-- Custom 5 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/custom-5.jpg"
+                        alt="Bespoke Custom Henna"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Bespoke Designs
+                    </div>
+
+                </div>
+
+
+                <!-- Festive 9 -->
+                <div class="sample-item">
+
+                    <img
+                        src="images/festive-9.jpg"
+                        alt="Festive Henna Design"
+                        loading="lazy"
+                    >
+
+                    <div class="sample-label">
+                        Festive Henna
+                    </div>
+
+                </div>
+
             </div>
+
+
+            <div class="gallery-button">
+
+                <a
+                    href="portfolio.html"
+                    class="btn btn-secondary"
+                >
+                    View Full Portfolio
+                </a>
+
+            </div>
+
         </div>
+
     </main>
 
+
+    <!-- FOOTER -->
     <footer class="site-footer">
+
         <div class="footer-bottom">
-            <p>&copy; 2026 Anu Henna Creations. Hosted with GitHub Pages.</p>
+
+            <p>
+                &copy; 2026 Anu Henna Creations.
+                Hosted with GitHub Pages.
+            </p>
+
         </div>
+
     </footer>
 
+
     <script src="main.js"></script>
+
 </body>
 </html>
